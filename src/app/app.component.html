@@ -1,0 +1,15 @@
+<div class="header">
+  <img src="/assets/img/STUDFORUM.png" alt="">
+  <div class="header_login" routerLink='/login'>Log in</div>
+</div>
+<div class="content">
+  <div class="sidebar">
+    <div class="sidebar_inner">
+      <a routerLink='/main-page' routerLinkActive='active'><i class="material-icons md-24">home</i>Home page</a>
+      <a routerLink='/ask-question' routerLinkActive='active'><i class="material-icons md-24">question_answer</i>Ask a question</a>
+      <a routerLink='/my-questions' routerLinkActive='active'><i class="material-icons md-24">help</i>My questions</a>
+      <a routerLink='/my-participation' routerLinkActive='active'><i class="material-icons md-24">question_answer</i>My participation</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

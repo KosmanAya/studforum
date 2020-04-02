@@ -1,0 +1,48 @@
+.toggle {
+    padding-right: 10rem;
+}
+form {
+    display: grid;
+    grid-gap: 1rem;
+}
+.form-item {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+textarea {
+    padding: 0.5rem;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+.toggle_submit {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.toggle_submit div{
+    cursor: pointer;
+    background: #0056AC;
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    font-weight: bolder;
+}
+.toggle_submit div:hover {
+    background: rgb(0, 71, 143);
+}
+.toggle_submit div:active {
+    background: rgb(0, 58, 116);
+}
+@media (max-width: 1200px) {
+    .toggle {
+        padding-right: 1rem;
+    }
+}
+@media (max-width: 850px) {
+    .toggle {
+        padding: 0;
+    }
+}

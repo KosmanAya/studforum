@@ -1,0 +1,19 @@
+<div class="main">
+    <div class="hello">
+        <div class="hello_title">Have a question? You’re at right place</div>
+        <div class="hello_text">We build products that empower developers and connect them to solutions that enable
+            productivity, growth, and discovery.</div>
+        <div class="hello_ask-question">
+            <div (click)='questionToggle()'>Ask a question</div>
+        </div>
+    </div>
+    <div class="unsolved">
+        <div class="unsolved_title">
+            Unsolved questions
+        </div>
+        <div class="unsolved_questions" *ngFor='let question of questions'>
+            <hr />
+            <app-question-card [question]="question"></app-question-card>
+        </div>
+    </div>
+</div>
