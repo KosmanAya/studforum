@@ -10,6 +10,7 @@ import { QuestionCardComponent } from './question-card/question-card.component';
 import { QuestionToggleComponent } from './question-toggle/question-toggle.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SignupComponent } from './signup/signup.component';
     QuestionCardComponent,
     QuestionToggleComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

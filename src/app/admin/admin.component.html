@@ -1,0 +1,11 @@
+<div class="admin-panel">
+    <div class="admin-panel_inner">
+        <div class="title">Edit list of questions</div>
+        <div *ngFor="let q of questions">
+            <div class="admin-panel_item">
+            <app-question-card [question]="q"></app-question-card>
+            <button>delete</button>
+        </div>
+        </div>
+    </div>
+</div>
