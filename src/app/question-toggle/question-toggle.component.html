@@ -2,12 +2,12 @@
     <form>
         <div class="form-item">
             Title
-            <input type="text">
+            <input type="text" name="title" [(ngModel)]="questionModel.title">
         </div>
         <div class="form-item">
             Question
-            <textarea name="" id="" cols="10" rows="7"></textarea>
+            <textarea name="" id="" cols="10" rows="7" name="text" [(ngModel)]="questionModel.text"></textarea>
         </div>
-        <div class="toggle_submit"><div>Ask a question</div></div>
+        <div class="toggle_submit" (click)="onSubmit()"><div>Ask a question</div></div>
     </form>
 </div>

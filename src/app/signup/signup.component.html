@@ -4,21 +4,21 @@
             <form>
                 <div class="form-item">
                     Name
-                    <input type="text">
+                    <input type="text" name="name" [(ngModel)]="signUpModel.name">
                 </div>
                 <div class="form-item">
                     Email
-                    <input type="text">
+                    <input type="text" name="email" [(ngModel)]="signUpModel.email">
                 </div>
                 <div class="form-item">
                     Password
-                    <input type="password">
+                    <input type="password" name="password" [(ngModel)]="signUpModel.password">
                 </div>
                 <div class="form-item">
                     Confirm Password
-                    <input type="password">
+                    <input type="password" name="password2" [(ngModel)]="signUpModel.password2">
                 </div>
-                <div class="signup_button">Sign up</div>
+                <div class="signup_button" (click)="onSignUp()">Sign up</div>
                 <div class="login"><div routerLink='/login'>Already have account?</div></div>
             </form>
         </div>

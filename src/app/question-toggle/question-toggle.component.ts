@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionsService } from '../questions.service';
 
 @Component({
   selector: 'app-question-toggle',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionToggleComponent implements OnInit {
 
-  constructor() { }
+  questionModel = {
+    title: '',
+    text: ''
+  }
+
+  constructor(private questionService: QuestionsService) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(): void {
+    console.log(this.questionModel)
+    this.questionService.create(this.questionModel)
   }
 
 }

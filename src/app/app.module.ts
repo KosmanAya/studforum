@@ -11,6 +11,7 @@ import { QuestionToggleComponent } from './question-toggle/question-toggle.compo
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { AdminComponent } from './admin/admin.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -26,8 +27,8 @@ import { AdminComponent } from './admin/admin.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

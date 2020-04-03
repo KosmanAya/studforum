@@ -4,13 +4,13 @@
             <form>
                 <div class="form-item">
                     Email
-                    <input type="text">
+                    <input type="text" name="email" [(ngModel)]="loginModel.email">
                 </div>
                 <div class="form-item">
                     Password
-                    <input type="password">
+                    <input type="password" name="password" [(ngModel)]="loginModel.password">
                 </div>
-                <div class="login_button">Log in</div>
+                <div class="login_button" (click)="onLogin()">Log in</div>
                 <div class="signup"><div routerLink='/signup'>Dont have an account?</div></div>
             </form>
         </div>

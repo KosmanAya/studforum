@@ -4,7 +4,7 @@
         <div *ngFor="let q of questions">
             <div class="admin-panel_item">
             <app-question-card [question]="q"></app-question-card>
-            <button>delete</button>
+            <button (click)="onDelete(q)">delete</button>
         </div>
         </div>
     </div>
