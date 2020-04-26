@@ -2,11 +2,34 @@
     <div class="qc_author">
         <div class="qc_avatar"><img src="{{question.avatar}}" alt=""></div>
         <div>
-            <div class="qc_author__name">{{ question.first_name}}</div>
-            <div class="qc_author__status">{{ question.status }}</div>
+            <div class="qc_author__name">{{ question.user.name}}</div>
+            <div class="qc_author__status">{{ question.user.status }}</div>
         </div>
     </div>
     <div class="qc_title">{{ question.title }}</div>
     <div class="qc_text">{{ question.text }}</div>
-    <div class="qc_likes"><i class="material-icons md-24">favorite</i> {{ question.likes }} Likes</div>
+    <div class="qc_likes"><i class="material-icons md-24" (click)="onLike(question.id)">favorite</i> {{ question.likes }} Likes</div>
+    <hr/>
+    <div class="answers">
+        <div *ngFor="let a of answers">
+            <div *ngIf="a.question.id == question.id">
+                <div class="ans_item">
+                    <h5>
+                        {{a.user.name}}
+                    </h5>
+                    <p>
+                        {{a.text}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="as">
+        <div class="as_ans">
+            <div class="label">What is your answer?</div>
+            <textarea name="text" [(ngModel)]="answerModel.text" cols="30" rows="10"></textarea>
+        </div>
+        <div class="as_button" (click)="answer(question.id)">Give an answer</div>
+    </div>
 </div>

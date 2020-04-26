@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private url = '/api/user/'
+  private url = 'http:localhost:8000/api/user/'
   private httpHeaders = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }

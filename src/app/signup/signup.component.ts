@@ -9,7 +9,7 @@ import { UserService } from '../user.service';
 export class SignupComponent implements OnInit {
   signUpModel = {
     name: '',
-    email: '',
+    username: '',
     password: '',
     password2: ''
   }

@@ -32,3 +32,23 @@
 .qc_likes i {
     color: red;
 }
+.as_ans {
+    display: grid;
+    padding-bottom: 1rem;
+}
+.as_button {
+    cursor: pointer;
+    background: #0056AC;
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    font-weight: bolder;
+}
+.ans_item {
+    padding: 2px;
+    border: 1px solid #868686;
+}
+.answers {
+    display: grid;
+    grid-gap: 1rem;
+}

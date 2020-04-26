@@ -3,8 +3,8 @@
         <div class="title">Edit list of questions</div>
         <div *ngFor="let q of questions">
             <div class="admin-panel_item">
-            <app-question-card [question]="q"></app-question-card>
-            <button (click)="onDelete(q)">delete</button>
+                {{q.title}}
+            <button (click)="onDelete(q.id)">delete</button>
         </div>
         </div>
     </div>

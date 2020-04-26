@@ -7,14 +7,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AdminService {
-  private url = '/api/admin/'
+  private url = 'http://localhost:8000/api/admin/'
   headers = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json'})
   }
   constructor(private http: HttpClient) { }
 
-  deleteQuestion(question: IQuestions): Observable<IQuestions> {
-    let url = this.url + 'question/' + question.id + '/'
-    return this.http.delete<IQuestions>(url, this.headers)
+  deleteQuestion(question): Observable<IQuestions> {
+    return this.http.delete<IQuestions>(this.url + question + '/')
   }
 }

@@ -10,7 +10,8 @@ export class QuestionToggleComponent implements OnInit {
 
   questionModel = {
     title: '',
-    text: ''
+    text: '',
+    author: ''
   }
 
   constructor(private questionService: QuestionsService) { }
@@ -19,8 +20,9 @@ export class QuestionToggleComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.questionModel)
-    this.questionService.create(this.questionModel)
+    let user = localStorage.getItem('username')
+    this.questionModel.author = user
+    this.questionService.create(this.questionModel).subscribe()
   }
 
 }

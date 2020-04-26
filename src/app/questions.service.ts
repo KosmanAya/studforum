@@ -7,7 +7,7 @@ import { IQuestions } from 'src/assets/interface/questions';
   providedIn: 'root'
 })
 export class QuestionsService {
-  private _url: string = 'assets/data/questions.json'
+  private _url: string = 'http://localhost:8000/api/questions/'
 
   httpHeaders = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -19,7 +19,18 @@ export class QuestionsService {
   }
 
   create(question): Observable<IQuestions> {
-    // let url = this._url
     return this.httpClient.post<IQuestions>(this._url, question, this.httpHeaders)
+  }
+
+  giveAnswer(answer): Observable<any> {
+    return this.httpClient.post<any>('http://localhost:8000/api/answers/', answer, this.httpHeaders)
+  }
+
+  getAnswers(): Observable<any[]> {
+    return this.httpClient.get<any[]>('http://localhost:8000/api/answers/')
+  }
+
+  onLike(id): Observable<any> {
+    return this.httpClient.put<any>(this._url + id + '/', this.httpHeaders)
   }
 }

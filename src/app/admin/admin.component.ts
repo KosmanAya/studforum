@@ -19,8 +19,7 @@ export class AdminComponent implements OnInit {
   }
 
   onDelete(question): void {
-    console.log(question)
-    this.adminService.deleteQuestion(question)
+    this.adminService.deleteQuestion(question).subscribe()
   }
 
 }
